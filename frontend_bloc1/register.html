@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Vagues de Riffs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body class="register-page">
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="biography.html" class="nav-link">BIOGRAPHIE</a></li>
+                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+                <button class="cta-button" onclick="window.location.href='login.html'">SE CONNECTER</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Inscription</h2>
+                        <p>Rejoignez la communauté Vagues de Riffs</p>
+                    </div>
+                    
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Jean">
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Dupont">
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="username">Nom d'utilisateur</label>
+                            <input type="text" id="username" name="username" required placeholder="rockfan123">
+                            <span class="error-message" id="usernameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required placeholder="••••••••">
+                                <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                    <span id="passwordToggle">👁️</span>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="passwordStrength"></div>
+                            <span class="error-message" id="passwordError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmer le mot de passe</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="••••••••">
+                                <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                    <span id="confirmPasswordToggle">👁️</span>
+                                </button>
+                            </div>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthDate">Date de naissance</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                            <span class="error-message" id="birthDateError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" required>
+                                <span class="checkmark"></span>
+                                J'accepte les <a href="#" class="terms-link">conditions d'utilisation</a> et la <a href="#" class="terms-link">politique de confidentialité</a>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir la newsletter Vagues de Riffs
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="auth-btn">S'inscrire</button>
+                       
+                       
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Déjà un compte? <a href="login.html">Se connecter</a></p>
+                    </div>
+                </div>
+                
+                <div class="auth-info">
+                    <h3>Pourquoi rejoindre Vagues de Riffs?</h3>
+                    <p>Devenez membre et profitez d'avantages exclusifs :</p>
+                    <ul>
+                        <li>🎵 Accès anticipé aux nouveaux morceaux</li>
+                        <li>🎫 Billetterie prioritaire pour les concerts</li>
+                        <li>📚 Paroles, tablatures et tutoriels</li>
+                        <li>🎁 Contenus exclusifs et behind the scenes</li>
+                        <li>💬 Communauté active de fans</li>
+                        <li>🏷️ Réductions sur la boutique officielle</li>
+                        <li>📱 Application mobile gratuite</li>
+                    </ul>
+                    <div class="auth-image">
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email">
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="biography.html">À Propos</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#careers">Carrières</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>123 Rue de la Musique<br>
+                75000 Paris, France<br>
+                +33 1 23 45 67 89<br>
+                contact@vaguesderiffs.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vagues de Riffs. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">i</a>
+                <a href="#">y</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

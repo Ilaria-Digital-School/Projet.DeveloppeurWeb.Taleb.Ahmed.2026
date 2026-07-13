@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Vagues de Riffs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Vagues de Riffs</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="biography.html" class="nav-link">BIOGRAPHIE</a></li>
+                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
+                    <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                    <li><a href="login.html" class="nav-link">CONNEXION</a></li>
+                    <li><a href="register.html" class="nav-link">INSCRIPTION</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h2>Contact</h2>
+                <p>Restons en contact pour faire du bruit ensemble</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Envoyez-nous un message</h2>
+                        <form class="contact-form" action="/api/contact/contact" method="post">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h2>Informations de Contact</h2>
+                        <div class="contact-item">
+                            <h3>Adresse</h3>
+                            <p>123 Rue de la Musique<br>
+                            75000 Paris<br>
+                            France</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Téléphone</h3>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>contact@vaguesderiffs.fr</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Réseaux Sociaux</h3>
+                            <div class="social-links">
+                                <a href="#">Facebook</a>
+                                <a href="#">Twitter</a>
+                                <a href="#">Instagram</a>
+                                <a href="#">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <h2>Réservations et Booking</h2>
+                <p>Pour toute demande de concert, festival ou événement, contactez notre équipe de booking :</p>
+                <div class="booking-info">
+                    <div class="booking-item">
+                        <h3>Booking France</h3>
+                        <p>booking.fr@vaguesderiffs.fr<br>
+                        +33 6 12 34 56 78</p>
+                    </div>
+                    <div class="booking-item">
+                        <h3>Booking International</h3>
+                        <p>booking.int@vaguesderiffs.fr<br>
+                        +33 6 98 76 54 32</p>
+                    </div>
+                    <div class="booking-item">
+                        <h3>Presse</h3>
+                        <p>presse@vaguesderiffs.fr<br>
+                        +33 6 45 67 89 01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="banner-content">
+                <h3>Vagues de Riffs * La Flexibilité du Rock * Une Énergie Incomparable</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email">
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="biography.html">À Propos</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#careers">Carrières</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>123 Rue de la Musique<br>
+                75000 Paris, France<br>
+                +33 1 23 45 67 89<br>
+                contact@vaguesderiffs.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vagues de Riffs. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">i</a>
+                <a href="#">y</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+    <script src="contact.js?v=2"></script>
+    <script src="auth.js"></script>
+    <style>
+        /* Contact Form Styles */
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .contact-form input.valid,
+        .contact-form textarea.valid {
+            border-color: #27ae60;
+        }
+
+        .contact-form input.invalid,
+        .contact-form textarea.invalid {
+            border-color: #e74c3c;
+        }
+
+        .field-error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .form-message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-primary.loading {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .btn-primary:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .message-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</body>
+</html>

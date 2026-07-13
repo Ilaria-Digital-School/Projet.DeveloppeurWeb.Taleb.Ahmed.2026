@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Utilisateur - Vagues de Riffs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user-dashboard.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="biography.html" class="nav-link">BIOGRAPHIE</a></li>
+                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li><a href="user-dashboard.html" class="nav-link active">MON ESPACE</a></li>
+                </ul>
+                <button class="cta-button" data-logout>DECONNEXION</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="user-dashboard-page">
+        <section class="user-hero">
+            <div class="dashboard-shell">
+                <div class="user-hero-card">
+                    <div>
+                        <p class="eyebrow">Espace personnel</p>
+                        <h2 id="userDashboardGreeting">Bonjour, prêt pour la prochaine vague de riffs ?</h2>
+                        <p class="hero-copy">Retrouve ici les informations réelles de ton compte, ton statut membre et les données importantes liées à ton inscription.</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-pill">
+                            <span class="stat-value" id="userMemberSinceValue">--</span>
+                            <span class="stat-label">Inscrit depuis</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-value" id="userNewsletterValue">--</span>
+                            <span class="stat-label">Newsletter</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-value" id="userStatusValue">--</span>
+                            <span class="stat-label">Statut du compte</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-shell dashboard-grid">
+            <div class="dashboard-main">
+                <article class="panel welcome-panel">
+                    <div class="panel-head">
+                        <h3>Mon profil</h3>
+                        <a href="#">Modifier</a>
+                    </div>
+                    <div class="profile-summary">
+                        <div class="avatar" id="userAvatar">US</div>
+                        <div>
+                            <h4 id="userFullName">Utilisateur</h4>
+                            <p id="userEmail">email@example.com</p>
+                            <span id="userRole">Utilisateur</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-head">
+                        <h3>Informations du compte</h3>
+                        <a href="concerts.html">Voir tout</a>
+                    </div>
+                    <div class="event-list">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <strong id="userIdValue">--</strong>
+                                <span>ID</span>
+                            </div>
+                            <div>
+                                <h4>Identifiant utilisateur</h4>
+                                <p id="userUsernameValue">Nom d'utilisateur</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-date">
+                                <strong id="userLastLoginDay">--</strong>
+                                <span id="userLastLoginMonth">---</span>
+                            </div>
+                            <div>
+                                <h4>Dernière connexion</h4>
+                                <p id="userLastLoginText">Aucune connexion enregistrée</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-head">
+                        <h3>Résumé du compte</h3>
+                        <a href="#">Détails</a>
+                    </div>
+                    <ul class="activity-feed" id="userAccountSummary">
+                        <li>Chargement des informations du compte...</li>
+                    </ul>
+                </article>
+            </div>
+
+            <aside class="dashboard-side">
+                <article class="panel accent-panel">
+                    <h3>Avantages membres</h3>
+                    <ul class="benefits-list">
+                        <li>Prévente 24h avant l'ouverture publique</li>
+                        <li>Accès à des contenus backstage exclusifs</li>
+                        <li>Réductions sur les articles de la boutique</li>
+                    </ul>
+                </article>
+
+                <article class="panel mini-panel">
+                    <h3>Ma playlist du moment</h3>
+                    <ul class="mini-list">
+                        <li>Onde Noire</li>
+                        <li>Feu sur l'Horizon</li>
+                        <li>Nuits Saturées</li>
+                        <li>Dernier Echo</li>
+                    </ul>
+                </article>
+
+                <article class="panel mini-panel">
+                    <h3>Actions rapides</h3>
+                    <div class="quick-actions">
+                        <a href="concerts.html">Réserver un concert</a>
+                        <a href="contact.html">Contacter l'équipe</a>
+                        <a href="#">Mettre à jour mon profil</a>
+                    </div>
+                </article>
+            </aside>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
