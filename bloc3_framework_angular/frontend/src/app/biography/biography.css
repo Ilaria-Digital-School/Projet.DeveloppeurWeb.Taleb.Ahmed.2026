@@ -1,0 +1,184 @@
+/* Biography Component Styles */
+
+/* Page Hero */
+.page-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero_bio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+.page-hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.page-hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Biography Section */
+.bio-section {
+    padding: 80px 0;
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.bio-text h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.bio-text p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.bio-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Members Section */
+.members-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.members-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.member-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.member-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.member-role {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Discography Section */
+.discography-section {
+    padding: 80px 0;
+}
+
+.discography-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.discography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.album-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.album-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album-card h3 {
+    font-size: 1.3rem;
+    margin: 20px 20px 10px;
+    color: #333;
+}
+
+.album-year {
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 20px 20px;
+}
+
+.album-tracks {
+    list-style: none;
+    padding: 0 20px 20px;
+}
+
+.album-tracks li {
+    padding: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Banner */
+.banner {
+    background: #007bff;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

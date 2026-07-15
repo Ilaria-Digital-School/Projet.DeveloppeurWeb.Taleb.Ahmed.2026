@@ -1,0 +1,74 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <h1><a routerLink="/home" class="nav-link">{{ title() }}</a></h1>
+    </div>
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/home')">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/biography')">Biographie</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/concerts')">Concerts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/contact')">Contact</a>
+      </li>
+      <li class="nav-item" *ngIf="!isAuthenticated">
+        <a class="nav-link" (click)="navigateTo('/login')">Connexion</a>
+      </li>
+      <li class="nav-item" *ngIf="!isAuthenticated">
+        <a class="nav-link" (click)="navigateTo('/register')">Inscription</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated">
+        <a class="nav-link" (click)="navigateTo('/user-dashboard')">MON ESPACE</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthenticated">
+        <a class="nav-link" (click)="logout()">DECONNEXION</a>
+      </li>
+    </ul>
+    <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>À propos</h4>
+      <p>{{ title() }} - Votre plateforme de musique préférée</p>
+    </div>
+    <div class="footer-section">
+      <h4>Liens rapides</h4>
+      <ul>
+        <li><a routerLink="/home">Accueil</a></li>
+        <li><a routerLink="/biography">Biographie</a></li>
+        <li><a routerLink="/concerts">Concerts</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Newsletter</h4>
+      <p>Recevez nos dernières actualités</p>
+      <form class="newsletter-form" (submit)="onNewsletterSubmit($event, newsletterEmail)">
+        <input type="email" placeholder="Votre email" [(ngModel)]="newsletterEmail" name="email">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 {{ title() }}. Tous droits réservés.</p>
+    <div class="social-icons">
+      <a href="#">FB</a>
+      <a href="#">TW</a>
+      <a href="#">IG</a>
+    </div>
+  </div>
+</footer>

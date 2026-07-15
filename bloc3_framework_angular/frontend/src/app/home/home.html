@@ -1,0 +1,27 @@
+<section class="hero">
+    <div class="hero-content">
+        <h2>Vagues de Riffs</h2>
+        <p>Le son du rock qui vous transporte</p>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2>Nos Réalisations</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" *ngFor="let item of portfolioItems">
+                <img [src]="item.image || 'https://via.placeholder.com/350x250?text=Image'" [alt]="item.title">
+                <div class="portfolio-info">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="banner-content">
+        <h3>Vagues de Riffs * La Flexibilité du Rock * Une Énergie Incomparable</h3>
+    </div>
+</section>

@@ -1,0 +1,103 @@
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Contact</h2>
+        <p>Restons en contact pour faire du bruit ensemble</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form-container">
+                <h2>Envoyez-nous un message</h2>
+                <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" formControlName="name" [class.invalid]="isFieldInvalid('name')" required>
+                        <small *ngIf="isFieldInvalid('name')">Le nom est requis (min. 2 caractères)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" formControlName="email" [class.invalid]="isFieldInvalid('email')" required>
+                        <small *ngIf="isFieldInvalid('email')">Une adresse email valide est requise</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" formControlName="subject" [class.invalid]="isFieldInvalid('subject')" required>
+                        <small *ngIf="isFieldInvalid('subject')">Le sujet est requis (min. 3 caractères)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" formControlName="message" rows="6" [class.invalid]="isFieldInvalid('message')" required></textarea>
+                        <small *ngIf="isFieldInvalid('message')">Le message est requis (min. 10 caractères)</small>
+                    </div>
+                    <button type="submit" class="btn-primary" [disabled]="isLoading">
+                        {{ isLoading ? 'Envoi en cours...' : 'Envoyer' }}
+                    </button>
+                </form>
+                
+                <!-- Message global -->
+                <div *ngIf="globalMessage" class="global-message" [class.success]="globalMessage.type === 'success'" [class.error]="globalMessage.type === 'error'">
+                    {{ globalMessage.text }}
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h2>Informations de Contact</h2>
+                <div class="contact-item">
+                    <h3>Adresse</h3>
+                    <p>123 Rue de la Musique<br>
+                    75000 Paris<br>
+                    France</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Téléphone</h3>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>contact@vaguesderiffs.fr</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Réseaux Sociaux</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="booking-section">
+    <div class="container">
+        <h2>Réservations et Booking</h2>
+        <p>Pour toute demande de concert, festival ou événement, contactez notre équipe de booking :</p>
+        <div class="booking-info">
+            <div class="booking-item">
+                <h3>Booking France</h3>
+                <p>booking.fr@vaguesderiffs.fr<br>
+                +33 6 12 34 56 78</p>
+            </div>
+            <div class="booking-item">
+                <h3>Booking International</h3>
+                <p>booking.int@vaguesderiffs.fr<br>
+                +33 6 98 76 54 32</p>
+            </div>
+            <div class="booking-item">
+                <h3>Presse</h3>
+                <p>presse@vaguesderiffs.fr<br>
+                +33 6 45 67 89 01</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="banner-content">
+        <h3>Vagues de Riffs * La Flexibilité du Rock * Une Énergie Incomparable</h3>
+    </div>
+</section>

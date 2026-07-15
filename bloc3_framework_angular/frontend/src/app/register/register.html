@@ -1,0 +1,110 @@
+<section class="auth-section">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Inscription</h2>
+                <p>Rejoignez la communauté Vagues de Riffs</p>
+            </div>
+            
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" formControlName="firstName" placeholder="Jean" [class.invalid]="isFieldInvalid('firstName')">
+                        <span class="error-message" *ngIf="isFieldInvalid('firstName')">Le prénom est requis</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" formControlName="lastName" placeholder="Dupont" [class.invalid]="isFieldInvalid('lastName')">
+                        <span class="error-message" *ngIf="isFieldInvalid('lastName')">Le nom est requis</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" formControlName="email" placeholder="votre@email.com" [class.invalid]="isFieldInvalid('email')">
+                    <span class="error-message" *ngIf="isFieldInvalid('email')">Une adresse email valide est requise</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" formControlName="username" placeholder="rockfan123" [class.invalid]="isFieldInvalid('username')">
+                    <span class="error-message" *ngIf="isFieldInvalid('username')">Le nom d'utilisateur est requis (min. 3 caractères)</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-input">
+                        <input type="password" id="password" formControlName="password" placeholder="••••••••" [class.invalid]="isFieldInvalid('password')">
+                        <button type="button" class="toggle-password" (click)="togglePasswordVisibility('password')">
+                            <span>{{ showPassword.password ? '🙈' : '👁️' }}</span>
+                        </button>
+                    </div>
+                    <div class="password-strength" [class]="getPasswordStrengthClass()"></div>
+                    <span class="error-message" *ngIf="isFieldInvalid('password')">Le mot de passe doit contenir au moins 8 caractères</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="••••••••" [class.invalid]="isFieldInvalid('confirmPassword')">
+                        <button type="button" class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">
+                            <span>{{ showPassword.confirmPassword ? '🙈' : '👁️' }}</span>
+                        </button>
+                    </div>
+                    <span class="error-message" *ngIf="isFieldInvalid('confirmPassword')">Les mots de passe ne correspondent pas</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthDate">Date de naissance</label>
+                    <input type="date" id="birthDate" formControlName="birthDate" [class.invalid]="isFieldInvalid('birthDate')">
+                    <span class="error-message" *ngIf="isFieldInvalid('birthDate')">La date de naissance est requise</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms" formControlName="terms">
+                        <span class="checkmark"></span>
+                        J'accepte les <a routerLink="/terms" class="terms-link">conditions d'utilisation</a> et la <a routerLink="/privacy" class="terms-link">politique de confidentialité</a>
+                    </label>
+                    <span class="error-message" *ngIf="isFieldInvalid('terms')">Vous devez accepter les conditions</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="newsletter" formControlName="newsletter">
+                        <span class="checkmark"></span>
+                        Je souhaite recevoir la newsletter Vagues de Riffs
+                    </label>
+                </div>
+                
+                <button type="submit" class="auth-btn" [disabled]="isLoading">
+                    {{ isLoading ? 'Inscription en cours...' : 'S'inscrire' }}
+                </button>
+
+                <!-- Message global -->
+                <div *ngIf="globalMessage" class="global-message" [class.success]="globalMessage.type === 'success'" [class.error]="globalMessage.type === 'error'">
+                    {{ globalMessage.text }}
+                </div>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Déjà un compte? <a routerLink="/login">Se connecter</a></p>
+            </div>
+        </div>
+        
+        <div class="auth-info">
+            <h3>Pourquoi rejoindre Vagues de Riffs?</h3>
+            <p>Devenez membre et profitez d'avantages exclusifs :</p>
+            <ul>
+                <li>🎵 Accès anticipé aux nouveaux morceaux</li>
+                <li>🎫 Billetterie prioritaire pour les concerts</li>
+                <li>📚 Paroles, tablatures et tutoriels</li>
+                <li>🎁 Contenus exclusifs et behind the scenes</li>
+                <li>💬 Communauté active de fans</li>
+                <li>🏷️ Réductions sur la boutique officielle</li>
+                <li>📱 Application mobile gratuite</li>
+            </ul>
+        </div>
+    </div>
+</section>

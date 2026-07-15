@@ -1,0 +1,113 @@
+
+<main class="user-dashboard-page">
+    <section class="user-hero">
+        <div class="dashboard-shell">
+            <div class="user-hero-card">
+                <div>
+                    <p class="eyebrow">Espace personnel</p>
+                    <h2>Bonjour, prêt pour la prochaine vague de riffs ?</h2>
+                    <p class="hero-copy">Retrouve ici les informations réelles de ton compte, ton statut membre et les données importantes liées à ton inscription.</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-pill">
+                        <span class="stat-value">{{ memberSince }}</span>
+                        <span class="stat-label">Inscrit depuis</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-value">{{ newsletterStatus }}</span>
+                        <span class="stat-label">Newsletter</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-value">{{ accountStatus }}</span>
+                        <span class="stat-label">Statut du compte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-shell dashboard-grid">
+        <div class="dashboard-main">
+            <article class="panel welcome-panel">
+                <div class="panel-head">
+                    <h3>Mon profil</h3>
+                    <a href="#">Modifier</a>
+                </div>
+                <div class="profile-summary">
+                    <div class="avatar">{{ userInitials }}</div>
+                    <div>
+                        <h4>{{ fullName }}</h4>
+                        <p>{{ email }}</p>
+                        <span>{{ role }}</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <h3>Informations du compte</h3>
+                    <a routerLink="/concerts">Voir tout</a>
+                </div>
+                <div class="event-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <strong>{{ userId }}</strong>
+                            <span>ID</span>
+                        </div>
+                        <div>
+                            <h4>Identifiant utilisateur</h4>
+                            <p>{{ username }}</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <strong>{{ lastLoginDay }}</strong>
+                            <span>{{ lastLoginMonth }}</span>
+                        </div>
+                        <div>
+                            <h4>Dernière connexion</h4>
+                            <p>{{ lastLoginText }}</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <h3>Résumé du compte</h3>
+                    <a href="#">Détails</a>
+                </div>
+                <ul class="activity-feed">
+                    <li *ngFor="let item of accountSummary">{{ item }}</li>
+                </ul>
+            </article>
+        </div>
+
+        <aside class="dashboard-side">
+            <article class="panel accent-panel">
+                <h3>Avantages membres</h3>
+                <ul class="benefits-list">
+                    <li>Prévente 24h avant l'ouverture publique</li>
+                    <li>Accès à des contenus backstage exclusifs</li>
+                    <li>Réductions sur les articles de la boutique</li>
+                </ul>
+            </article>
+
+            <article class="panel mini-panel">
+                <h3>Ma playlist du moment</h3>
+                <ul class="mini-list">
+                    <li *ngFor="let song of playlist">{{ song }}</li>
+                </ul>
+            </article>
+
+            <article class="panel mini-panel">
+                <h3>Actions rapides</h3>
+                <div class="quick-actions">
+                    <a routerLink="/concerts">Réserver un concert</a>
+                    <a routerLink="/contact">Contacter l'équipe</a>
+                    <a href="#">Mettre à jour mon profil</a>
+                </div>
+            </article>
+        </aside>
+    </section>
+</main>

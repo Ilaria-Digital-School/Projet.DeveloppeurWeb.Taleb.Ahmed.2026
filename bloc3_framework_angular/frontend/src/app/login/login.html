@@ -1,0 +1,63 @@
+<section class="auth-section">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Connexion</h2>
+                <p>Bienvenue sur Vagues de Riffs</p>
+            </div>
+            
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" formControlName="email" placeholder="votre@email.com" [class.invalid]="isFieldInvalid('email')">
+                    <span class="error-message" *ngIf="isFieldInvalid('email')">Une adresse email valide est requise</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-input">
+                        <input type="password" id="password" formControlName="password" placeholder="••••••••" [class.invalid]="isFieldInvalid('password')">
+                        <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+                            <span>{{ showPassword ? '🙈' : '👁️' }}</span>
+                        </button>
+                    </div>
+                    <span class="error-message" *ngIf="isFieldInvalid('password')">Le mot de passe est requis</span>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember" formControlName="remember">
+                        <span class="checkmark"></span>
+                        Se souvenir de moi
+                    </label>
+                    <a routerLink="/forgot-password" class="forgot-password">Mot de passe oublié?</a>
+                </div>
+                
+                <button type="submit" class="auth-btn" [disabled]="isLoading">
+                    {{ isLoading ? 'Connexion en cours...' : 'Se connecter' }}
+                </button>
+                
+                <!-- Message global -->
+                <div *ngIf="globalMessage" class="global-message" [class.success]="globalMessage.type === 'success'" [class.error]="globalMessage.type === 'error'">
+                    {{ globalMessage.text }}
+                </div>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Pas encore de compte? <a routerLink="/register">S'inscrire</a></p>
+            </div>
+        </div>
+        
+        <div class="auth-info">
+            <h3>Rejoignez la communauté Vagues de Riffs</h3>
+            <p>Accédez à du contenu exclusif :</p>
+            <ul>
+                <li>🎵 Vidéos backstage</li>
+                <li>🎫 Billetterie prioritaire</li>
+                <li>📚 Paroles et tablatures</li>
+                <li>🎁 Contenus inédits</li>
+                <li>💬 Communauté de fans</li>
+            </ul>
+        </div>
+    </div>
+</section>

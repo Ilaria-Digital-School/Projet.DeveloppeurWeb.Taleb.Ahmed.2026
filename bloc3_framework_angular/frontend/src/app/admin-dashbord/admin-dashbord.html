@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Vagues de Riffs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">SITE</a></li>
+                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li><a href="admin-dashboard.html" class="nav-link active">ADMIN</a></li>
+                </ul>
+                <button class="cta-button" data-logout>SE DECONNECTER</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-dashboard-page">
+        <section class="admin-hero">
+            <div class="admin-shell">
+                <div class="admin-hero-card">
+                    <div>
+                        <p class="admin-tag">Dashboard administrateur</p>
+                        <h2 id="adminDashboardGreeting">Pilotage global du site et de la communaute</h2>
+                        <p id="adminDashboardSubtitle">Consulte les indicateurs cles, gere les utilisateurs, surveille les contenus et garde une vision claire de l activite.</p>
+                    </div>
+                    <div class="admin-status">
+                        <span class="status-dot"></span>
+                        <span id="adminIdentity">Systeme operationnel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-shell metrics-grid">
+            <article class="metric-card">
+                <span class="metric-label">Utilisateurs</span>
+                <strong id="adminUsersMetric">--</strong>
+                <p id="adminUsersMetricDetail">Chargement...</p>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Concerts publies</span>
+                <strong id="adminConcertsMetric">--</strong>
+                <p id="adminConcertsMetricDetail">Chargement...</p>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Messages contact</span>
+                <strong id="adminMessagesMetric">--</strong>
+                <p id="adminMessagesMetricDetail">Chargement...</p>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Newsletter</span>
+                <strong id="adminNewsletterMetric">--</strong>
+                <p id="adminNewsletterMetricDetail">Chargement...</p>
+            </article>
+        </section>
+
+        <section class="admin-shell admin-grid">
+            <div class="admin-main">
+                <article class="admin-panel">
+                    <div class="panel-top">
+                        <h3>Utilisateurs recents</h3>
+                        <a href="#">Gerer</a>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminRecentUsersTable">
+                            <tr>
+                                <td colspan="4">Chargement des utilisateurs...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="admin-panel">
+                    <div class="panel-top">
+                        <h3>Contenus recents</h3>
+                        <a href="#">Ouvrir le CMS</a>
+                    </div>
+                    <div class="task-list" id="adminRecentContentList">
+                        <div class="task-item">
+                            <div>
+                                <h4>Chargement...</h4>
+                                <p>Recuperation des contenus recents.</p>
+                            </div>
+                            <button type="button">...</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="admin-side">
+                <article class="admin-panel side-panel">
+                    <h3>Raccourcis admin</h3>
+                    <div class="admin-links">
+                        <a href="#">Creer un concert</a>
+                        <a href="#">Ajouter un article</a>
+                        <a href="#">Exporter les utilisateurs</a>
+                        <a href="#">Consulter les logs</a>
+                    </div>
+                </article>
+
+                <article class="admin-panel side-panel">
+                    <h3>Alertes</h3>
+                    <ul class="alert-list" id="adminAlertsList">
+                        <li>Chargement des alertes...</li>
+                    </ul>
+                </article>
+            </aside>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

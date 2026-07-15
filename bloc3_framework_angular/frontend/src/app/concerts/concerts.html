@@ -1,0 +1,57 @@
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Concerts</h2>
+        <p>Retrouvez-nous sur scène pour des moments inoubliables</p>
+    </div>
+</section>
+
+<section class="concerts-section">
+    <div class="container">
+        <h2>Dates de Concert</h2>
+        
+        <!-- Loading state -->
+        <div *ngIf="isLoading" class="loading-state">
+            <p>Chargement des concerts...</p>
+        </div>
+
+        <!-- Error state -->
+        <div *ngIf="error" class="error-state">
+            <p>{{ error }}</p>
+        </div>
+
+        <!-- Concerts list -->
+        <div class="concerts-list" *ngIf="!isLoading && !error">
+            <div class="concert-item" *ngFor="let concert of concerts">
+                <div class="concert-date">
+                    <span class="day">{{ concert.date | date:'d' }}</span>
+                    <span class="month">{{ concert.date | date:'MMM' | titlecase }}</span>
+                    <span class="year">{{ concert.date | date:'yyyy' }}</span>
+                </div>
+                <div class="concert-info">
+                    <h3>{{ concert.title }}</h3>
+                    <p>{{ concert.venue.name }}, {{ concert.venue.city }}</p>
+                    <p>{{ concert.venue.address }}</p>
+                    <p class="concert-time">{{ concert.time }}</p>
+                    <p class="concert-price" *ngIf="concert.price">
+                        Prix: {{ formatPrice(concert.price) }}
+                    </p>
+                </div>
+                <div class="concert-actions">
+                    <button class="btn-primary" (click)="onTicketClick(concert)">Billets</button>
+                    <button class="btn-secondary" (click)="onInfoClick(concert)">Plus d'infos</button>
+                </div>
+            </div>
+
+            <!-- Empty state -->
+            <div *ngIf="concerts.length === 0" class="empty-state">
+                <p>Aucun concert à venir pour le moment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="banner-content">
+        <h3>Vagues de Riffs * La Flexibilité du Rock * Une Énergie Incomparable</h3>
+    </div>
+</section>
