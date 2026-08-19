@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin - Vagues de Riffs</title>
+    <title>Dashboard Admin | Vagues de Riffs - Gestion du Site</title>
+    <meta name="description" content="Dashboard administrateur de Vagues de Riffs. Gestion des utilisateurs, concerts, messages et contenus du site. Accès réservé aux administrateurs.">
+    <link rel="canonical" href="https://vaguesderiffs.fr/admin-dashboard.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="admin-dashboard.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
                     <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">SITE</a></li>
-                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
-                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                    <li><a href="admin-dashboard.html" class="nav-link active">ADMIN</a></li>
+                <ul class="nav-menu" role="menubar" aria-label="Navigation principale">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">SITE</a></li>
+                    <li role="none"><a href="concerts.html" class="nav-link" role="menuitem">CONCERTS</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">CONTACT</a></li>
+                    <li role="none"><a href="admin-dashboard.html" class="nav-link active" role="menuitem" aria-current="page">ADMIN</a></li>
                 </ul>
-                <button class="cta-button" data-logout>SE DECONNECTER</button>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="admin-dashboard-page">
+    <main class="admin-dashboard-page" id="main-content" tabindex="-1">
         <section class="admin-hero">
             <div class="admin-shell">
                 <div class="admin-hero-card">

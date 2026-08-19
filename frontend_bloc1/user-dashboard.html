@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Utilisateur - Vagues de Riffs</title>
+    <title>Espace Utilisateur | Vagues de Riffs - Mon Compte Membre</title>
+    <meta name="description" content="Accédez à votre espace personnel Vagues de Riffs. Consultez votre profil, vos réservations de concerts et profitez des avantages membres exclusifs.">
+    <link rel="canonical" href="https://vaguesderiffs.fr/user-dashboard.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="user-dashboard.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
                     <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">HOME</a></li>
-                    <li><a href="biography.html" class="nav-link">BIOGRAPHIE</a></li>
-                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
-                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                    <li><a href="user-dashboard.html" class="nav-link active">MON ESPACE</a></li>
+                <ul class="nav-menu" role="menubar" aria-label="Navigation principale">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">HOME</a></li>
+                    <li role="none"><a href="biography.html" class="nav-link" role="menuitem">BIOGRAPHIE</a></li>
+                    <li role="none"><a href="concerts.html" class="nav-link" role="menuitem">CONCERTS</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">CONTACT</a></li>
+                    <li role="none"><a href="user-dashboard.html" class="nav-link active" role="menuitem" aria-current="page">MON ESPACE</a></li>
                 </ul>
-                <button class="cta-button" data-logout>DECONNEXION</button>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="user-dashboard-page">
+    <main class="user-dashboard-page" id="main-content" tabindex="-1">
         <section class="user-hero">
             <div class="dashboard-shell">
                 <div class="user-hero-card">

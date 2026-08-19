@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion - Vagues de Riffs</title>
+    <title>Connexion | Vagues de Riffs - Accès Espace Membre</title>
+    <meta name="description" content="Connectez-vous à votre espace membre Vagues de Riffs pour accéder aux contenus exclusifs, billetterie prioritaire et communauté de fans.">
+    <link rel="canonical" href="https://vaguesderiffs.fr/login.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
 </head>
 <body class="login-page">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
                     <h1><a href="index.html" style="text-decoration: none; color: inherit;">Vagues de Riffs</a></h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">HOME</a></li>
-                    <li><a href="biography.html" class="nav-link">BIOGRAPHIE</a></li>
-                    <li><a href="concerts.html" class="nav-link">CONCERTS</a></li>
-                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <ul class="nav-menu" role="menubar" aria-label="Navigation principale">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">HOME</a></li>
+                    <li role="none"><a href="biography.html" class="nav-link" role="menuitem">BIOGRAPHIE</a></li>
+                    <li role="none"><a href="concerts.html" class="nav-link" role="menuitem">CONCERTS</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">CONTACT</a></li>
                 </ul>
-                <button class="cta-button" onclick="window.location.href='register.html'">S'INSCRIRE</button>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="auth-section">
             <div class="auth-container">
                 <div class="auth-card">
@@ -98,7 +100,8 @@
                 <h4>Newsletter</h4>
                 <p>Inscrivez-vous pour recevoir nos dernières actualités</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Votre email">
+                    <label for="newsletter-email" class="visually-hidden">Email pour la newsletter</label>
+                    <input type="email" id="newsletter-email" placeholder="Votre email" aria-required="true">
                     <button type="submit">S'inscrire</button>
                 </form>
             </div>
@@ -122,11 +125,11 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Vagues de Riffs. Tous droits réservés.</p>
-            <div class="social-icons">
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">i</a>
-                <a href="#">y</a>
+            <div class="social-icons" aria-label="Réseaux sociaux">
+                <a href="#" aria-label="Facebook (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">f</a>
+                <a href="#" aria-label="Twitter (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">t</a>
+                <a href="#" aria-label="Instagram (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">i</a>
+                <a href="#" aria-label="YouTube (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">y</a>
             </div>
         </div>
     </footer>
